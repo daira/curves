@@ -1,4 +1,4 @@
-use ark_ff::test_rng;
+use ark_std::test_rng;
 use rand::Rng;
 
 use crate::*;
@@ -6,13 +6,13 @@ use crate::*;
 use ark_curve_tests::fields::*;
 
 #[test]
-fn test_fp() {
+fn test_fr() {
     let mut rng = test_rng();
-    let a: Fp = rng.gen();
-    let b: Fp = rng.gen();
+    let a: Fr = rng.gen();
+    let b: Fr = rng.gen();
     field_test(a, b);
     sqrt_field_test(a);
-    primefield_test::<Fp>();
+    primefield_test::<Fr>();
 }
 
 #[test]

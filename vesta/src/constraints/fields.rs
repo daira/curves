@@ -1,8 +1,8 @@
-use crate::fp::Fp;
+use crate::fq::Fq;
 use ark_r1cs_std::fields::fp::FpVar;
 
-/// A variable that is the R1CS equivalent of `crate::Fp`.
-pub type FBaseVar = FpVar<Fp>;
+/// A variable that is the R1CS equivalent of `crate::Fq`.
+pub type FBaseVar = FpVar<Fq>;
 
 #[test]
 fn test() {
